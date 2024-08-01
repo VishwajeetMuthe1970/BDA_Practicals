@@ -1,0 +1,157 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\f0\fs22\lang9\tab\tab\tab\tab\b\fs28\par
+
+\pard\sa200\sl276\slmult1 Name\tab\tab        \b0 : MUTHE VISHWAJEET SANTOSH\b\par
+Enrollment No.  : \b0 2102030400186\b\par
+SEM\tab\tab        : \b0 7th C.E.-2\b\par
+Batch\tab\tab        : \b0 2 (Model-2)\par
+\b Subject\tab        :  \b0 BDA\b\tab\tab\par
+
+\pard\sa200\sl276\slmult1\qc\ul\fs36 Practical -2 \fs28\par
+\i HDFS COMMANDS\ulnone\i0\par
+
+\pard\sa200\sl276\slmult1\par
+1. JPS \par
+   - Syntax: jps [options]\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b0 List all Java processes with their PIDs:\b\line      jps\par
+{\pntext\f0 ii.\tab}\b0 List all Java processes with their PIDs and main class names:\b\line    jps -l\par
+{\pntext\f0 iii.\tab}\b0 List all Java processes with their PIDs and JVM arguments:\b\line    jps -v\par
+{\pntext\f0 iv.\tab}\b0 List all Java processes with their PIDs, main class names, and arguments passed to the main method:\b\line    jps -m\par
+
+\pard\sa200\sl276\slmult1    - Description: \b0 Lists Java processes running on the machine, showing their Process IDs (PIDs) and main classes.\b\par
+2. mkdir  \par
+   - Syntax: hadoop fs -mkdir [options] <directory_path>\par
+   - Description: \b0 Creates a new directory with the specified name.\b\par
+3. ls \par
+   - Syntax: hadoop fs -ls [options] <path>\par
+   - Description: \b0 Lists files and directories in the specified path or current directory. Options can include `-l` for long format, `-a` for all files including hidden ones.\b\par
+4. put\par
+   - Syntax: hadoop fs -put local_path [remote_path]\par
+   - Description: \b0 Uploads a file from the local system to a remote filesystem (often used with HDFS commands).\b\par
+5. get \par
+   - Syntax:hadoop fs - get remote_path [local_path]\par
+   - Description: \b0 Downloads a file from a remote filesystem to the local system (often used with HDFS commands).\b\par
+6. cat\par
+   - Syntax: hadoop fs -cat [options] file_name\par
+   - Description: \b0 Concatenates and displays the content of one or more files.\b\par
+7. mv  \par
+   - Syntax: hadoop fs -mv [options] source destination\par
+   - Description: \b0 Moves or renames files or directories from the source to the destination.\b\par
+8. cp\par
+   - Syntax: hadoop fs -cp [options] source destination\par
+   - Description:\b0  Copies files or directories from the source to the destination.\par
+\b 9. movefromlocal  \par
+   - Syntax: hadoop fs -movefromlocal local_path remote_path\par
+   - Description: \b0 Moves a file from the local filesystem to a remote filesystem (often used with HDFS commands).\par
+\b 10. movetolocal\par
+    - Syntax: hadoop fs  -movetolocal remote_path local_path\par
+    - Description:\b0  Moves a file from a remote filesystem to the local filesystem (often used with HDFS commands).\par
+\b 11. rm  \par
+    - Syntax: hadoop fs -rm [options] file_name\par
+    - Description: \b0 Removes (deletes) files or directories. Use `-r` for recursive deletion of directories.\par
+\b 12. tail \par
+    - Syntax: hadoop fs -tail [options] <file>\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b0 Display the last 1KB of a file:\b\line       hadoop fs -tail /user/hadoop/file.txt\par
+{\pntext\f0 ii.\tab}\b0 Follow the file as it grows:\b\line      hadoop fs -tail -f /user/hadoop/file.txt\b0\tab\b\par
+
+\pard\sa200\sl276\slmult1     - Description: \b0 Outputs the last part of a file. Options like `-f` can be used to follow the file for new additions.\b\par
+13. expunge  \par
+    - Syntax: hadoop fs -expunge [options] path\par
+    - Description: \b0 Removes files or directories permanently from a filesystem (e.g., HDFS).\b\par
+14. chown\par
+    - Syntax: hadoop fs -chown [options] owner[:group] file_name\par
+    - Description: \b0 Changes the owner and/or group of a file or directory.\b\par
+15. chgrp\par
+    - Syntax: hadoop fs -chgrp [options] group file_name\par
+    - Description: \b0 Changes the group ownership of a file or directory.\b\par
+16. setrep\par
+    - Syntax: hadoop fs -setrep -w [-R] [replication] [path ...]\par
+    - Description: \b0 Sets the replication factor for files in HDFS.\b\par
+17. du\par
+    - Syntax: hadoop fs -du [URI]    \par
+   - Description: \b0 Estimates and reports the disk space used by files and  \tab\tab\tab directories.\b\par
+18. df \par
+    - Syntax: hadoop fs -df [options] [path]\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b0 Human-Readable Format:\b\line     hadoop fs -df -h\par
+
+\pard\sa200\sl276\slmult1     - Description: \b0 Reports the amount of disk space used and available on filesystems.\b\par
+19. fsck\par
+    - Syntax: hadoop fs  -fsck [options] [path]\par
+    - Description: \b0 Checks the filesystem for errors and inconsistencies (often used with HDFS).\b\par
+20. touch\par
+    - Syntax: hadoop fs -touch [options] file_name\par
+    - Description:\b0  Changes file timestamps or creates an empty file if it doesn't exist.\b\par
+21. text \par
+    - Syntax: hadoop fs  -text [options] file_name\par
+    - Description: \b0 (Note: The `text` command is not standard and may vary based on context. It might be used to display or process text files.)\par
+\b\par
+22. stat\par
+    - Syntax: hadoop fs -stat [options] file_name\par
+    - Description: \b0 Displays detailed information about a file or directory, such as size, permissions, and modification times.\par
+\b\par
+23. chmod \par
+    - Syntax: hadoop fs -chmod [options] mode file_name\par
+    - Description: \b0 Changes the permissions of a file or directory using symbolic or octal modes.\par
+\b\par
+24. appendtofile\par
+    - Syntax: hadoop fs -appendtofile file_name "text_to_append"\par
+    - Description: \b0 Appends text to the end of a file (note that this is not a standard Unix command, and its implementation may vary).\par
+\b\par
+25. checksum  \par
+    - Syntax: hadoop fs -checksum [options] file_name\par
+    - Description: \b0 Computes and displays a checksum for a file to verify its integrity.\par
+\b\par
+26. count  \par
+    - Syntax: hadoop fs -count [options] path\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b0 Show Quotas (-q):\b\line     hadoop fs -count -q <paths>\par
+{\pntext\f0 ii.\tab}\b0 Human-Readable Format (-h):\b\line     hadoop fs -count -h <paths>\par
+{\pntext\f0 iii.\tab}\b0 Verbose Output (-v):\b\line     hadoop fs -count -v <paths>\par
+{\pntext\f0 iv.\tab}\b0 Exclude Snapshots (-x):\b\line     hadoop fs -count -x <paths>\par
+{\pntext\f0 v.\tab}\b0 Storage Type Quota and Usage (-t):\b\line     hadoop fs -count -t <storage type> <paths>\par
+{\pntext\f0 vi.\tab}\b0 Quota Usage Only (-u):\b\line     hadoop fs -count -u <paths>\par
+{\pntext\f0 vii.\tab}\b0 Erasure Coding Policy (-e):\b\line     hadoop fs -count -e <paths>\par
+
+\pard\sa200\sl276\slmult1     - Description: \b0 Counts files, lines, or other entities in a directory or file (not a standard command, but may be used in custom scripts).\par
+\b\par
+27. find  \par
+    - Syntax: hadoop fs  -find [path] [options] [expression]\par
+    - Description: \b0 Searches for files and directories in a directory hierarchy based on specified criteria.\par
+\b\par
+28. getmerge\par
+    - Syntax: hadoop fs -getmerge [-nl] [src ...] [dest]\par
+    - Description: \b0 Merges files from HDFS into a single file on the local filesystem.\par
+\par
+\b 29. stat with options\par
+    - Syntax: \b0\par
+
+\pard 
+{\pntext\f0 i.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1 Get the file name and modification time:\b\line       hadoop fs -stat "%n %y" /user/hadoop/file.txt\par
+{\pntext\f0 ii.\tab}\b0 Get the block size and replication factor:\b\line\b0      \b hadoop fs -stat "%o %r" /user/hadoop/file.txt\par
+
+\pard 
+{\pntext\f0 iii.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pnlcrm{\pntxta.}}
+\fi-360\li720\sa200\sl240\slmult1\b0 Get all details:\b\par
+
+\pard\sa200\sl240\slmult1\b0  \tab    \b hadoop fs -stat "%n %y %u %g %b %d" /user/hadoop/file.txt\par
+
+\pard\sa200\sl276\slmult1\b0\tab     \b\par
+ - Description: \b0 Displays detailed information about a file or directory, such as size, permissions, and modification times.\par
+
+\pard\sa200\sl276\slmult1\par
+\b\par
+}
+ 
